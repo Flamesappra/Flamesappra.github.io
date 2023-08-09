@@ -3,8 +3,31 @@
 	<head>
 		<title>Flames App</title>
 		<meta charset="utf-8" />
+		<style>
+			h1 {
+				text-align: center;
+			}
+		</style>
 	</head>
 	<body>
 		<h1>Flames App Ra</h1>
+		<div>
+			<h1 id="firstName"></h1>
+			<h1>FLAMES</h1>
+			<h1 id="secondName"></h1>
+		</div>
+		<script>
+			let person1 = prompt("Please enter first name", "");
+			let person2 = prompt("Please enter second name", "");
+			if (person1 == null || person1 == "" || person2 == null || person2 == "") {
+				alert("Please enter names properly");
+				location.reload();
+			}
+			else {
+				document.getElementById("firstName").innerHTML = person1;
+				document.getElementById("secondName").innerHTML = person2;
+			}
+			
+		</script>
 	</body>
 </html>
